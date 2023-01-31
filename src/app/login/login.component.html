@@ -1,0 +1,30 @@
+<div class="body">
+   <div class="login">
+      <mat-card>
+         <form [formGroup]="loginForm">
+            <h1><b>Log In</b></h1>
+             <mat-form-field appearance="outline">
+               <mat-label>Email</mat-label>
+               <mat-icon matPrefix>mail</mat-icon>
+               <input matInput placeholder="Enter email" formControlName="email">
+               <mat-error *ngIf="submitted && loginForm['controls']['email'].hasError('required')">
+                  Email is required</mat-error>
+             </mat-form-field>
+            <mat-form-field appearance="outline">
+               <mat-label>Password</mat-label>
+               <mat-icon matPrefix>lock</mat-icon>
+               <input matInput placeholder="Enter password"  [type]="hide ? 'password' : 'text'" formControlName="password">
+               <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+               [attr.aria-pressed]="hide">
+               <mat-icon matSuffix>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+               </button>
+               <mat-error *ngIf="submitted && loginForm['controls']['password'].hasError('required')">
+                  password is required</mat-error>
+            </mat-form-field>
+            <br>
+            <button class="acho" mat-raised-button color="warn" [disabled]="!loginForm.valid" (click)="submit()">Login</button>
+            <br>
+         </form>
+      </mat-card>
+   </div>
+</div>

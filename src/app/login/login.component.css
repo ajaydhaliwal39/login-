@@ -1,0 +1,35 @@
+.body {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    background-color: oldlace;
+}
+
+.login {
+    width: 100%;
+    max-width: 330px;
+    text-align: center;
+}
+
+.acho {
+    width: 70%;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-card {
+    background: #3f51b5;
+    border-radius: 30px;
+    color: white;
+    height: 360px;
+    width: 400px;
+    padding: 40px;
+}
+
+h1 {
+    padding: 10px 10px;
+    text-align: start;
+}
